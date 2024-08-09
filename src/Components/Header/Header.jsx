@@ -1,4 +1,4 @@
-import backgroundImage from '../../assets/img/pexels-goumbik-952478.jpg'
+// import backgroundImage from '../../assets/img/pexels-goumbik-952478.jpg'
 
 const Header = () => {
     return (
@@ -6,7 +6,7 @@ const Header = () => {
             <div
   className="hero  my-5  h-[650px] "
   style={{
-    backgroundImage:`url(${backgroundImage})`,
+    backgroundImage:`url(https://i.ibb.co/jDHqwCL/pexels-goumbik-952478.jpg)`,
   }}>
   <div className="hero-overlay  bg-opacity-60"></div>
   <div className="hero-content text-neutral-content text-center">

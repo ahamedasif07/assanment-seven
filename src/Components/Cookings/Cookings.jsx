@@ -9,7 +9,7 @@ const Cookings = ({ cookingPreparing,handleCooking,onCoking }) => {
     // const { recipe_image, short_description, recipe_name, preparing_time, calories, ingredients } = cookingPreparing;
 
     return (
-        <div className="w-1/3 shadow-lg rounded-md">
+        <div className="md:w-1/3 shadow-lg rounded-md">
             <div className="px-4">
                 <h2 className="text-2xl font-bold grid p-2 border-gray-400 justify-center">
                     Went-to-cook :
