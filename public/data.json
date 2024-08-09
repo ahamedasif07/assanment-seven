@@ -1,7 +1,7 @@
 [
     {
       "recipe_image": "https://i.ibb.co/fYsKpdy/pexels-sohelripon-25440677.jpg",
-      "recipe_id": "1",
+      "recipe_id": 1,
       "recipe_name": "Chicken Stir Fry",
       "short_description": "A quick and healthy stir-fry with chicken and vegetables.",
       "ingredients": [
@@ -17,7 +17,7 @@
     },
     {
       "recipe_image": "https://i.ibb.co/n7Yt8Ph/pexels-sebastian-coman-photography-1598188-3590401.jpg",
-      "recipe_id": "2",
+      "recipe_id": 2,
       "recipe_name": "Vegetarian Pasta",
       "short_description": "A delicious and easy pasta dish with a mix of fresh vegetables.",
       "ingredients": [
@@ -33,7 +33,7 @@
     },
     {
       "recipe_image": "https://i.ibb.co/cwqrSS8/pexels-cristian-rojas-8448079.jpg",
-      "recipe_id": "3",
+      "recipe_id": 3,
       "recipe_name": "Beef Tacos",
       "short_description": "Classic beef tacos with a blend of spices and fresh toppings.",
       "ingredients": [
@@ -49,7 +49,7 @@
     },
     {
       "recipe_image": "https://i.ibb.co/z5Yvgnt/pexels-renestrgar-19102880.jpg",
-      "recipe_id": "4",
+      "recipe_id": 4,
       "recipe_name": "Margherita Pizza",
       "short_description": "A simple yet flavorful pizza topped with fresh tomatoes and basil.",
       "ingredients": [
@@ -65,7 +65,7 @@
     },
     {
       "recipe_image": "https://i.ibb.co/QKTSvcY/pexels-amanda-lim-5074906-9772442.jpg",
-      "recipe_id": "5",
+      "recipe_id": 5,
       "recipe_name": "Shrimp Curry",
       "short_description": "A rich and creamy curry with tender shrimp and aromatic spices.",
       "ingredients": [
@@ -81,7 +81,7 @@
     },
     {
       "recipe_image": "https://i.ibb.co/Vj1qC59/pexels-don-marcus-cafe-1346066855-25639531.jpg",
-      "recipe_id": "6",
+      "recipe_id": 6,
       "recipe_name": "Fluffy Pancakes",
       "short_description": "Light and fluffy pancakes perfect for a weekend breakfast.",
       "ingredients": [
@@ -97,7 +97,7 @@
     },
     {
       "recipe_image": "https://i.ibb.co/ZMM519X/pexels-julieaagaard-2097090.jpg",
-      "recipe_id": "7",
+      "recipe_id": 7,
       "recipe_name": "Caesar Salad",
       "short_description": "A classic Caesar salad with crisp lettuce, croutons, and parmesan.",
       "ingredients": [
@@ -129,7 +129,7 @@
     },
     {
       "recipe_image": "https://i.ibb.co/HF6F6ZD/pexels-vhusko-13573666.jpg",
-      "recipe_id": "9",
+      "recipe_id": 9,
       "recipe_name": "Classic Beef Burger",
       "short_description": "A juicy beef burger with cheese, lettuce, and tomato on a toasted bun.",
       "ingredients": [
@@ -145,7 +145,7 @@
     },
     {
       "recipe_image": "https://i.ibb.co/qMk83Vy/pexels-polina-tankilevitch-4109998.jpg",
-      "recipe_id": "10",
+      "recipe_id": 10,
       "recipe_name": "Chocolate Cake",
       "short_description": "A rich and moist chocolate cake with a creamy chocolate frosting.",
       "ingredients": [

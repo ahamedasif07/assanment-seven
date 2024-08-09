@@ -7,41 +7,39 @@ import Header from './Components/Header/Header'
 import NavBar from './Components/Header/NavBar'
 import OurRecipes from './Components/OurRecipes/OurRecipes'
 import Recipes from './Components/Recipes/Recipes'
-import { RiEyeCloseLine } from 'react-icons/ri'
+
 
 function App() {
 
   const [cookingPreparing,setCookingPeparaing]=useState([]);
+  const [onCoking,setOnCoking]=useState([]);
 
 
   const handleAddToPeparaing =(recipe)=>{
 
-    const {recipe_image,short_description,recipe_name,preparing_time,calories,ingredients}=recipe;
-
-
-    // Swal.fire({
-    //   icon: "error",
-    //   title: "Oops...",
-    //   text: "Something went wrong!",
-    //   footer: '<a href="#">Why do I have this issue?</a>'
-    // });
-    const isExsist = cookingPreparing.find(preparing => preparing.id === recipe.id)
-    if(isExsist){
-      Swal.fire({
-      icon: "error",
-      title: "Alrady Available",
-      text: "!!!!",
-      
-    });
-    }
-    else{
-      const newCookingPanding = [...cookingPreparing,recipe]
-    setCookingPeparaing(newCookingPanding)
-    }
-
+    const {recipe_image,short_description,recipe_name,preparing_time,calories,ingredients,id}=recipe;
     
-    
+    // const isExsist = cookingPreparing.find((procesing) => procesing.id === recipe.id)
+    //  if(isExsist){
+    //   alert('alrady exsist')
+    //  }
+    //  else{
+    //   const newPanding = [...cookingPreparing,recipe]
+    //   setCookingPeparaing(newPanding)
+    //  }
+
+    const newPanding = [...cookingPreparing,recipe]
+    setCookingPeparaing(newPanding)
+   
   }  
+
+
+  const handleCooking = (panding) =>{
+    console.log('go for cook',panding)
+    const adToCooking = [...onCoking,panding]
+    setOnCoking(adToCooking)
+    
+  }
   
 
   return (
@@ -55,6 +53,8 @@ function App() {
        <Recipes handleAddToPeparaing ={handleAddToPeparaing }></Recipes>
        <Cookings 
        cookingPreparing={cookingPreparing}
+       handleCooking={handleCooking}
+       onCoking={onCoking}
        ></Cookings>
        </div>
       </div>

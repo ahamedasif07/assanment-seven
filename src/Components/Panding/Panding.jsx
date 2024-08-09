@@ -1,12 +1,15 @@
+
+import PropTypes from 'prop-types';
 import { IoMdTime } from "react-icons/io";
 import { IoBonfireOutline } from "react-icons/io5";
-import PropTypes from 'prop-types';
-
-const Panding = ({panding}) => {
-    const {recipe_image,short_description,recipe_name,preparing_time,calories}=panding;
+const Panding = ({panding,handleCooking,}) => {
+    console.log(panding)
+    const {recipe_image,short_description,recipe_name,preparing_time,calories,ingredients}=panding;
+    
     return (
         <div>
-            <div className="card bg-base-100  shadow-xl">
+            
+            <div className="card bg-base-100 my-4 shadow-xl">
   <figure>
     <img className=''
       src={recipe_image}
@@ -28,7 +31,7 @@ const Panding = ({panding}) => {
         <h3 className='flex items-center gap-2'><span><IoBonfireOutline /></span> {calories}calories</h3>
     </div>
     <div className="card-actions justify-end">
-      <button  className='btn btn-success'>Preparing</button>
+      <button onClick={()=>handleCooking(panding)} className='btn btn-success'>Peparing..</button>
     </div>
   </div>
 </div>
@@ -37,8 +40,9 @@ const Panding = ({panding}) => {
     );
 };
 
-Panding.propTypes = {
-    panding : PropTypes.object.isRequired
+Panding.propType={
+    panding :PropTypes.object.isRequired,
+    handleCooking : PropTypes.func.isRequired
 }
 
 export default Panding;

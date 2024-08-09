@@ -1,15 +1,12 @@
-
-import PropTypes from 'prop-types';
 import { IoMdTime } from "react-icons/io";
 import { IoBonfireOutline } from "react-icons/io5";
-
-const Recipe = ({recipe,handleAddToPeparaing}) => {
-    // console.log(recipe)
-    const {recipe_image,short_description,recipe_name,preparing_time,calories,ingredients}=recipe;
+import PropTypes from 'prop-types';
+const Cooked = ({cooked}) => {
+    console.log(cooked)
+    const {recipe_image,short_description,recipe_name,preparing_time,calories,}=cooked;
     return (
         <div>
-
-<div className="card bg-base-100 h-[800px] shadow-xl">
+                        <div className="card bg-base-100 my-4 shadow-xl">
   <figure>
     <img className=''
       src={recipe_image}
@@ -23,17 +20,15 @@ const Recipe = ({recipe,handleAddToPeparaing}) => {
     <p>{short_description}</p>
 
     <hr />
-    <h2 className='text-xl font-bold'>Ingredients : {ingredients.length}</h2>
-    {
-        ingredients.map((ingredent,idx) => <li key={idx}>{ingredent}</li>)
-    }
+    
+    
     <hr />
     <div className=''>
       <h2 className='flex items-center gap-2'> <span ><IoMdTime /></span> {preparing_time} minutes</h2>
         <h3 className='flex items-center gap-2'><span><IoBonfireOutline /></span> {calories}calories</h3>
     </div>
     <div className="card-actions justify-end">
-      <button onClick={()=>-handleAddToPeparaing(recipe)} className='btn btn-success'>Want to Cook</button>
+      <button  className='btn btn-success'>Done</button>
     </div>
   </div>
 </div>
@@ -42,9 +37,8 @@ const Recipe = ({recipe,handleAddToPeparaing}) => {
     );
 };
 
-Recipe.propTypes = {
-    recipe : PropTypes.object.isRequired,
-    handleAddToPeparaing:PropTypes.func.isRequired
+Cooked.propTypes={
+    cooked : PropTypes.object.isRequired
 }
 
-export default Recipe;
+export default Cooked;

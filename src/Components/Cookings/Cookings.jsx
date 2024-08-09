@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import Panding from '../Panding/Panding';
+import Cooked from '../Cooked/Cooked';
 
-const Cookings = ({ cookingPreparing, }) => {
+const Cookings = ({ cookingPreparing,handleCooking,onCoking }) => {
     console.log(cookingPreparing);
 
     // Example: Destructuring if needed, uncomment if using.
@@ -17,12 +18,24 @@ const Cookings = ({ cookingPreparing, }) => {
              <div className='my-4'>
              {
                 cookingPreparing.map(panding => <Panding 
-                   key={panding.id} panding={panding}></Panding>)
+                   key={panding.id}
+                   handleCooking={handleCooking}
+                   onCoking={onCoking}
+                   panding={panding}></Panding>)
               }
              </div>
 
             </div>
             <hr />
+
+            <div className="text-2xl font-bold grid p-2 border-gray-400 justify-center">
+                <h2 className='text-2xl my-2 text-center'>cooking now</h2>
+                {
+                  onCoking.map(cooked => <Cooked key={cooked.id} cooked={cooked}></Cooked>)
+                }
+
+             </div>
+
             <div className="flex justify-between">
                 <div>
                     {/* Content can go here */}
@@ -36,6 +49,8 @@ Cookings.propTypes = {
     cookingPreparing: PropTypes.object,  // Adjust based on the actual shape of the object
     cookingTime: PropTypes.string,
     cooKcalories: PropTypes.number,
+    handleCooking: PropTypes.func.isRequired,
+    onCoking :PropTypes.object.isRequired
 };
 
 export default Cookings;
