@@ -1,12 +1,13 @@
 
 import { useState } from 'react'
-import Swal from 'sweetalert2'
+
 import './App.css'
 import Cookings from './Components/Cookings/Cookings'
 import Header from './Components/Header/Header'
 import NavBar from './Components/Header/NavBar'
 import OurRecipes from './Components/OurRecipes/OurRecipes'
 import Recipes from './Components/Recipes/Recipes'
+import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
 
   const handleAddToPeparaing =(recipe)=>{
 
-    const {recipe_image,short_description,recipe_name,preparing_time,calories,ingredients,id}=recipe;
+    // const {recipe_image,short_description,recipe_name,preparing_time,calories,ingredients,id}=recipe;
     
     // const isExsist = cookingPreparing.find((procesing) => procesing.id === recipe.id)
     //  if(isExsist){
@@ -35,9 +36,19 @@ function App() {
 
 
   const handleCooking = (panding) =>{
+    // const sExsistOnCooking = onCoking.find(coking => coking.id == panding.id)
+    // if(sExsistOnCooking){
+    //   alert('add started cooking')
+    // }
+    // else{
+      
+    // }
     console.log('go for cook',panding)
     const adToCooking = [...onCoking,panding]
-    setOnCoking(adToCooking)
+      setOnCoking(adToCooking)
+      const remainingPanding = cookingPreparing.filter(goForCook => goForCook.id !== panding.id )
+      setCookingPeparaing(remainingPanding)
+    
     
   }
   
@@ -57,6 +68,7 @@ function App() {
        onCoking={onCoking}
        ></Cookings>
        </div>
+       <Footer></Footer>
       </div>
 
     

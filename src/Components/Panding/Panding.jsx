@@ -2,9 +2,10 @@
 import PropTypes from 'prop-types';
 import { IoMdTime } from "react-icons/io";
 import { IoBonfireOutline } from "react-icons/io5";
+
 const Panding = ({panding,handleCooking,}) => {
     console.log(panding)
-    const {recipe_image,short_description,recipe_name,preparing_time,calories,ingredients}=panding;
+    const {recipe_image,short_description,recipe_name,preparing_time,calories}=panding;
     
     return (
         <div>
