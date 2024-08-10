@@ -36,18 +36,19 @@ function App() {
 
 
   const handleCooking = (panding) =>{
-    // const sExsistOnCooking = onCoking.find(coking => coking.id == panding.id)
-    // if(sExsistOnCooking){
-    //   alert('add started cooking')
-    // }
-    // else{
-      
-    // }
-    console.log('go for cook',panding)
-    const adToCooking = [...onCoking,panding]
+    const isExsistOnCooking = onCoking.find(coking => coking.id == panding.id)
+    if(isExsistOnCooking === true){
+      alert('add started cooking')
+    }
+    else{
+      const adToCooking = [...onCoking,panding]
       setOnCoking(adToCooking)
       const remainingPanding = cookingPreparing.filter(goForCook => goForCook.id !== panding.id )
       setCookingPeparaing(remainingPanding)
+      
+    }
+    console.log('go for cook',panding)
+    
     
     
   }
